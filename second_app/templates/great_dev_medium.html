@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div>
+    <h1>Great Dev (Medium) - Solution.</h1>
+    <h5 class="mt-3">Try to explore some extra modal fields from the links below.</h5>
+    <h5>https://great-devxy.medium.com/understanding-django-model-fields-and-fieldsets-for-efficient-database-modeling-f1c58170df14</h5>
+    <div class="mt-4">
+        <form>
+            {% csrf_token %}
+            {{form|crispy}}
+            <button class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
